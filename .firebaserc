@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "michaelofficespace-ffac3",
-    "prod": "michaelofficespace-ffac3"
+    "default": "officespacemike-bbd03",
+    "prod": "officespacemike-bbd03"
   },
   "targets": {
     "specno-office-space": {

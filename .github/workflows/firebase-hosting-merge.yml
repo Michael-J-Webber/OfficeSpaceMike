@@ -15,6 +15,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MICHAELOFFICESPACE_FFAC3 }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_OFFICESPACEMIKE_BBD03 }}'
           channelId: live
-          projectId: michaelofficespace-ffac3
+          projectId: officespacemike-bbd03
