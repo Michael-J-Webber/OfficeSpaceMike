@@ -1,0 +1,109 @@
+:host {
+  display: block;
+  position: relative;
+  padding-left: 0.8rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@mixin body-text {
+  font-size: 0.8rem;
+  color: #484954;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0.5rem 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    @include body-text;
+
+    app-specno-icon {
+      margin-right: 0.5rem;
+    }
+
+    &:last-child {
+      padding-bottom: 1.5rem;
+    }
+  }
+}
+
+.mat-expansion-panel {
+  padding: 1rem 1rem 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  .hovered {
+    background: #f8fafc;
+  }
+
+  &-header {
+    height: auto;
+    padding: 0;
+
+    &.mat-expanded {
+      height: auto;
+    }
+
+    &-description {
+      display: flex;
+      flex-flow: column nowrap;
+      margin-right: 0;
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      line-height: 1.6rem;
+      font-weight: 700;
+      margin-right: 0;
+      justify-content: space-between;
+      color: #484954;
+      button {
+        &:hover {
+          background: #f8fafc;
+        }
+      }
+    }
+  }
+
+  &-body {
+    padding: 0;
+  }
+}
+
+.staff-member-indication {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 0.4px solid rgba(13, 68, 119, 0.4);
+  @include body-text;
+
+  app-specno-icon {
+    margin-right: 0.8rem;
+  }
+}
+
+.show-more {
+  @include body-text;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0 0;
+  &:hover {
+    background: #f8fafc;
+  }
+
+  app-specno-icon {
+    margin-left: 0.8rem;
+  }
+}

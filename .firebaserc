@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "michaelofficespace-ffac3",
+    "prod": "michaelofficespace-ffac3"
+  },
+  "targets": {
+    "specno-office-space": {
+      "hosting": {
+        "specno-office-space": [
+          "specno-office-space"
+        ]
+      }
+    }
+  }
+}

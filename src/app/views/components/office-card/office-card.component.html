@@ -1,0 +1,50 @@
+<ng-container *ngIf="thisOffice">
+
+    <app-side-color-bar [baseColor]="getMySidebar(thisOffice.color)"></app-side-color-bar>
+
+    <mat-expansion-panel hideToggle>
+
+        <mat-expansion-panel-header  #panel>
+
+            <mat-panel-title [ngClass]="{'hovered': titleHovering}" (mouseover)="toggelTitleHovering()" (mouseout)="toggelTitleHovering()" (click)="panel._toggle(); navigate()">
+                {{thisOffice.name}}
+                <button mat-icon-button color="primary" (click)="editOffice()" (mouseover)="toggelTitleHovering()" (mouseout)="toggelTitleHovering()">
+                    <app-specno-icon [icon]="icons.edit"></app-specno-icon>
+                </button>
+            </mat-panel-title>
+
+            <mat-panel-description (click)="panel._toggle();" (mouseover)="toggelTitleHovering()" (mouseout)="toggelTitleHovering()">
+                <div class="staff-member-indication" [ngClass]="{'hovered': titleHovering}" (click)="navigate()">
+                    <app-specno-icon [icon]="icons.people"></app-specno-icon>
+                    <strong>{{thisOffice.members?.length ?? 0}}</strong> &nbsp; Staff Members in Office
+                </div>
+                <div (click)="panel._toggle(); opened = !opened" class="show-more" (mouseover)="toggelTitleHovering()" (mouseout)="toggelTitleHovering()">
+                    More info
+                    <app-specno-icon [icon]="opened ? icons.see_less : icons.see_more"></app-specno-icon>
+                </div>
+            </mat-panel-description>
+
+        </mat-expansion-panel-header>
+        <div>
+            <ul>
+                <li>
+                    <app-specno-icon [icon]="icons.phone"></app-specno-icon>
+                    {{thisOffice.contactNumber}}
+                </li>
+                <li>
+                    <app-specno-icon [icon]="icons.email"></app-specno-icon>
+                    {{thisOffice.email}}
+                </li>
+                <li>
+                    <app-specno-icon [icon]="icons.people_blue"></app-specno-icon>
+                    Office Capacity: {{thisOffice.capacity}}
+                </li>
+                <li>
+                    <app-specno-icon [icon]="icons.location"></app-specno-icon>
+                    {{thisOffice.address}}
+                </li>
+            </ul>
+        </div>
+    </mat-expansion-panel>
+    
+</ng-container>

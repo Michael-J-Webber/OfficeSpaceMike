@@ -1,0 +1,13 @@
+<h2>Office Colour</h2>
+<div class="mat-error" *ngIf="error">
+    Please select a colour for this office
+</div >
+<ng-container *ngFor="let color of colors | keyvalue; ; let i = index">
+
+    <div t class="color-container" (click)="select(color.value.label)">
+        <div class="color-selection-tile"  [ngClass]="{'selected': selectedColor == color.value.label}" [ngStyle]="{'background': color.value.hex}">
+        </div> 
+    </div>
+    <div  class="break" *ngIf="i == 5"></div>
+    
+</ng-container>

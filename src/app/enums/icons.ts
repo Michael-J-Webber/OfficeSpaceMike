@@ -1,0 +1,15 @@
+export enum Icon {
+    back = '/assets/images/icons/back.svg',
+    close = '/assets/images/icons/close.svg',
+    edit ='/assets/images/icons/edit.svg',
+    email = '/assets/images/icons/email.svg',
+    location = '/assets/images/icons/location.svg',
+    people = '/assets/images/icons/people.svg',
+    people_blue = '/assets/images/icons/people_blue.svg',
+    phone = '/assets/images/icons/phone.svg',
+    search = '/assets/images/icons/search.svg',
+    see_less = '/assets/images/icons/see-less.svg',
+    see_more = '/assets/images/icons/see-more.svg',
+    dots = '/assets/images/icons/dots.svg',
+    plus = 'assets/images/icons/plus.svg',
+} 

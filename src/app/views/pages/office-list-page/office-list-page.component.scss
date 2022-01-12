@@ -1,0 +1,15 @@
+:host {
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+
+  h1 {
+    font-weight: 500 !important;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+app-office-card + app-office-card {
+  margin-top: 1rem;
+}

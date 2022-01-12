@@ -1,0 +1,66 @@
+.mat-dialog-content {
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .back-button {
+    margin-right: 0.5rem;
+    margin-left: -0.75rem;
+  }
+  .close-button {
+    margin-right: -0.75rem;
+  }
+  h2 {
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+}
+
+.dialog-inputs-container {
+  margin-top: 1rem;
+}
+
+.selection-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    border: solid thin #489dda;
+  }
+  &::after {
+    margin-left: 2px;
+  }
+  &.step-one {
+    &::before {
+      background-color: #489dda;
+    }
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+  &.step-two {
+    &::before {
+      background-color: #ffffff;
+    }
+    &::after {
+      background-color: #489dda;
+    }
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}

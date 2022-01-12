@@ -1,0 +1,49 @@
+<header>
+    <button mat-icon-button color="primary" *ngIf="stepIndex == 2" class="back-button" (click)="moveBack()">
+        <app-specno-icon [icon]="icons.back"></app-specno-icon>
+    </button>
+    <h2 mat-dialog-title>
+        {{isExistingMember ? 'Edit' : 'New'}} Staff Member
+    </h2>
+    <button mat-icon-button color="primary" class="close-button" mat-dialog-close>
+        <app-specno-icon [icon]="icons.close"></app-specno-icon>
+    </button>
+</header>
+
+<ng-container *ngIf="stepIndex == 1">
+
+    <mat-dialog-content class="mat-typography dialog-inputs-container">
+        <form [formGroup]="myForm">
+
+            <mat-form-field appearance="fill">
+                <input placeholder="First name" cdkFocusInitial formControlName="firstName" matInput required>
+                <mat-error *ngIf="errorHandling('firstName', 'required')">Please enter first name</mat-error>
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill">
+                <input placeholder="Last Name" formControlName="lastName" matInput (keydown.Tab)="moveNext()" (keydown.Enter)="moveNext()" required>
+                <mat-error *ngIf="errorHandling('lastName', 'required')">Please enter last name</mat-error>
+            </mat-form-field>
+
+        </form>
+    </mat-dialog-content>
+
+</ng-container>
+
+<ng-container *ngIf="stepIndex == 2">
+    <mat-dialog-content class="mat-typography">
+        <app-avatar-selector [selected]="avatar" (newAvatarSelected)="selectAvatar($event)" [error]="showAvatarError"></app-avatar-selector>
+    </mat-dialog-content>
+</ng-container>
+
+<div [ngClass]="{'step-one': stepIndex == 1, 'step-two': stepIndex == 2}" class="selection-indicator"></div>
+
+<div class="center"  *ngIf="stepIndex == 1">
+    <button (click)="moveNext()" mat-button color="primary">Next</button>
+</div>
+
+<div class="center"  *ngIf="stepIndex == 2">
+    
+    <button *ngIf="avatar ==''" (click)="createMember()" mat-button color="primary">{{isExistingMember ? 'Update' : 'Add'}}  Staff Member</button>
+    <button *ngIf="avatar !==''" (click)="createMember()" [mat-dialog-close]="true" mat-button color="primary">{{isExistingMember ? 'Update' : 'Add'}}  Staff Member</button>
+</div>

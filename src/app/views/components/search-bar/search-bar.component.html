@@ -1,0 +1,6 @@
+<mat-form-field appearance="fill">
+    <input placeholder="Search" matInput [(ngModel)]="searchText" (ngModelChange)="emitUpdate()">
+    <button mat-icon-button matSuffix>
+        <app-specno-icon [icon]="icons.search"></app-specno-icon>
+    </button>
+</mat-form-field>

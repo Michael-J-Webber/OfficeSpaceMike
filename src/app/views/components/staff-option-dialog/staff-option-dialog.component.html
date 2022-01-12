@@ -1,0 +1,18 @@
+<ng-container *ngIf="!shouldDelete">
+    <button mat-button [mat-dialog-close]="'isEdit'" color="primary">Edit Staff Member</button>
+    <button mat-button (click)="shouldDelete = true">Delete Staff Member</button>
+</ng-container>
+
+<ng-container *ngIf="shouldDelete">
+    
+    <header>
+        <button mat-icon-button color="primary" class="back-button" (click)="shouldDelete = false">
+            <app-specno-icon [icon]="icons.back"></app-specno-icon>
+        </button>
+        <h2 mat-dialog-title>Are you sure you want to delete staff member?</h2>
+    </header>
+
+    <button mat-button [mat-dialog-close]="'isDelete'" color="warn">Delete Member</button>
+    <button mat-button mat-dialog-close>Keep Member</button>
+
+</ng-container>

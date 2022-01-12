@@ -1,0 +1,126 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: #f8fafc;
+}
+
+.spacer {
+  display: block;
+  height: 2rem;
+}
+
+.mat-fab {
+  &.mat-primary {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    background-color: #0d4477;
+  }
+  app-specno-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}
+
+// @overrides
+app-office-card .mat-expansion-panel {
+  &:not(.mat-expanded)
+    .mat-expansion-panel-header:hover:not([aria-disabled="true"]) {
+    background: #ffffff;
+  }
+  &-header {
+    font-family: "Inter", sans-serif;
+    .mat-content {
+      flex-direction: column;
+    }
+  }
+  &-body {
+    padding: 0.5rem 0 0 !important;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 700 !important;
+  color: #484954;
+}
+
+button.mat-button {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  min-width: 12rem;
+  border-radius: 3rem;
+  padding: 0.3rem 3rem;
+  margin-top: 1rem;
+  background: #f8fafc;
+  color: #489dda;
+  &.mat-primary {
+    background: #489dda;
+    color: white;
+  }
+  &.mat-warn {
+    background: #f44336;
+    color: white;
+  }
+}
+
+.mat-dialog-container {
+  background: #f8fafc;
+  position: relative;
+  border-radius: 10px;
+  header .mat-button-focus-overlay {
+    display: none;
+  }
+}
+app-search-bar .mat-form-field-wrapper {
+  position: relative;
+  padding-bottom: 0;
+}
+
+.mat-form-field-underline {
+  display: none;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  padding: 0 0 0 0.75rem !important;
+  border-radius: 5px !important;
+  background-color: #fff;
+}
+
+.mat-body,
+.mat-body-1,
+.mat-typography {
+  font: 400 14px/20px "Inter", sans-serif;
+}
+
+.mat-icon-button {
+  align-items: center;
+  justify-content: center;
+  display: flex !important;
+
+  app-specno-icon {
+    display: flex;
+  }
+}

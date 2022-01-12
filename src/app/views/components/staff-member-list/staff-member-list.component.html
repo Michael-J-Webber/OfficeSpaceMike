@@ -1,0 +1,16 @@
+<ng-container *ngIf="officeMembers">
+    
+    <app-search-bar ([searchText])="query" (textChange)="query = $event"></app-search-bar>
+    
+    <div class="spacer"></div>
+    
+    <h2>Staff Members In Office</h2>
+
+    <app-staff-member-list-entry *ngFor="let member of officeMembers | searchFilter: query" [member]="member" [officeId]="officeId"></app-staff-member-list-entry>
+
+</ng-container>
+
+<ng-container *ngIf="!officeMembers?.length">
+    No Staff members in this office
+</ng-container>
+

@@ -1,0 +1,35 @@
+.sidebar-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0.8rem;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 9rem;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.2;
+    position: absolute;
+    top: 30%;
+    right: -4.5rem;
+    left: -4.5rem;
+    border-radius: 100%;
+    margin: 0 auto;
+  }
+  &::after {
+    content: "";
+    width: 9rem;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.2;
+    position: absolute;
+    top: 60%;
+    right: -4.5rem;
+    left: -4.5rem;
+    border-radius: 100%;
+    margin: 0 auto;
+  }
+}

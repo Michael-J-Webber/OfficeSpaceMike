@@ -1,0 +1,13 @@
+<h2>Avatar</h2>
+<div class="mat-error" *ngIf="error">
+    Please select an avatar
+</div>
+<ng-container  *ngFor="let avatar of avatars | keyvalue; let i = index">
+    <div class="avatar-container" (click)="select(avatar.key)">
+        <div class="avatar-selection" [ngClass]="{'selected': avatar.key == selected}">
+            <img [src]="getUrl(avatar.value)" alt="">
+        </div>
+    </div>
+    <div  class="break" *ngIf="i == 3"></div>
+</ng-container>
+

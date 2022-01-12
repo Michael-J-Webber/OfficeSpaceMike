@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\views\\components",
+    "\\src\\app\\views\\components\\avatar-selector",
+    "\\src\\app\\views\\components\\office-snack-bar",
+    "\\src\\app\\views\\pages",
+    "\\src\\app\\views\\pages\\office-create-edit",
+    "\\src\\app\\views\\pages\\office-detail",
+    "\\src\\app\\views\\pages\\office-list-page"
+  ],
+  "SelectedNode": "\\src",
+  "PreviewInSolutionExplorer": false
+}

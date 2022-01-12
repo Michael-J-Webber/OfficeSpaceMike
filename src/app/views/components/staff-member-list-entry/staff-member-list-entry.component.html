@@ -1,0 +1,12 @@
+<ng-container *ngIf="member">
+
+    <img [src]="getUrl(member.avatar)" alt="">
+    <span class="employeeName">
+        {{member.firstName}} {{member.lastName}}
+    </span>
+    
+    <button mat-icon-button color="primary" (click)="openDialog()">
+        <app-specno-icon [icon]="icons.dots"></app-specno-icon>
+    </button>
+
+</ng-container>

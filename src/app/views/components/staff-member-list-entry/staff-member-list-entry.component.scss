@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  margin-right: -0.75rem;
+
+  img {
+    margin-right: 1rem;
+  }
+
+  .employeeName {
+    flex-grow: 1;
+  }
+}

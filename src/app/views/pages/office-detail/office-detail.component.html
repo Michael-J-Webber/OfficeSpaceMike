@@ -1,0 +1,28 @@
+
+<header>
+    <button mat-icon-button color="primary" class="back-button" (click)="goBack()">
+        <app-specno-icon [icon]="icons.back"></app-specno-icon>
+    </button>
+    <h3>Office</h3>
+</header> 
+
+<ng-container *ngIf="isLoading">
+    Loading...
+</ng-container>
+
+<ng-container *ngIf="!thisOffice && !isLoading">
+    something went wrong
+</ng-container>
+
+<ng-container *ngIf="thisOffice && !isLoading">
+
+    <app-office-card [thisOffice]="thisOffice"></app-office-card> 
+    <div class="spacer"></div>
+    
+    <app-staff-member-list [officeMembers]="thisOffice.members" [officeId]="officeId"></app-staff-member-list>
+    
+    <button (click)="openDialog()" mat-fab color="primary" aria-label="Example icon button with a delete icon"> 
+        <app-specno-icon [icon]="icons.plus"></app-specno-icon>
+    </button>
+
+</ng-container>

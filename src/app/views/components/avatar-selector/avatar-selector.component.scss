@@ -1,0 +1,54 @@
+:host {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  &:last-child {
+    margin-right: 13%;
+  }
+  &:nth-child(7) {
+    margin-left: 13%;
+  }
+  &:nth-child(1n + 6) {
+    .avatar-selection {
+      margin-top: 0rem;
+    }
+  }
+}
+
+.mat-error ~ .avatar-container:nth-child(8) {
+  margin-left: 13%;
+}
+
+.avatar-selection {
+  width: 3rem;
+  height: 3rem;
+  color: transparent;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: solid 4px #f8fafc;
+
+  &.selected {
+    border: solid 4px #475569;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.break,
+.mat-error,
+h2 {
+  flex-basis: 100%;
+}
+
+h2 {
+  font-weight: 500 !important;
+}

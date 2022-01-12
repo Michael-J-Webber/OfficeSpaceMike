@@ -1,0 +1,55 @@
+<header>
+    <button mat-icon-button color="primary" class="back-button" (click)="goBack()">
+        <app-specno-icon [icon]="icons.back"></app-specno-icon>
+    </button>
+    <h3>{{officeId ? 'Edit Office' : 'New Office'}}</h3>
+</header> 
+
+<ng-container *ngIf="officeId && isLoading">
+    Loading
+</ng-container>
+
+<ng-container *ngIf="officeId && !isLoading || !officeId && !isLoading">
+
+    <form [formGroup]="myForm" novalidate>
+
+        <mat-form-field appearance="fill">
+            <input placeholder="Office name" matInput formControlName="name" required>
+            <mat-error *ngIf="errorHandling('name', 'required')">Please give the office a name</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <input placeholder="Physical Address" matInput type="text" formControlName="address" required>
+            <mat-error *ngIf="errorHandling('address', 'required')">Please enter an address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <input placeholder="Email address" matInput type="email" formControlName="email" required>
+            <mat-error *ngIf="errorHandling('email', 'required')">Please enter an email</mat-error>
+            <mat-error *ngIf="errorHandling('email', 'email')">Please enter a valid email</mat-error>
+        </mat-form-field>
+            
+        <mat-form-field appearance="fill">
+            <input placeholder="Phone Number" matInput type ="number" formControlName="contact" required>
+            <mat-error *ngIf="errorHandling('contact', 'required')">Please enter a phone number</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <input placeholder="Maximum Capacity" matInput type="number" formControlName="capacity" required>
+            <mat-error *ngIf="errorHandling('capacity', 'required')">Please enter the office's capacity</mat-error>
+        </mat-form-field>
+
+    </form>
+    
+    <app-color-selector (newColorSelected)="selectColor($event)" [error]="showColorError" [selectedColor]="color"></app-color-selector>
+    
+    <div class="center" *ngIf="!officeId">
+        <button mat-button (click)="createOffice()" color="primary">Add Office</button>
+    </div>
+
+    <div class="center" *ngIf="officeId">
+        <button mat-button color="primary" (click)="createOffice()">Update Office</button>
+        <button mat-button (click)="openDeleteDialog()">Delete Office</button>
+    </div>
+    
+</ng-container>
