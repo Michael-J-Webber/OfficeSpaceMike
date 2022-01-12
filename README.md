@@ -1,4 +1,4 @@
-# SpecnoOfficeSpace
+# OfficeSpaceMikeOfficeSpaceMike
 
 > ## This project was implemented with :
 >
@@ -16,7 +16,7 @@
 5. Run `npm install` while in the project directory to install local project dependancies.
 6. Once once this is complete, its time to setup an firebase project.
    1. Go to [Firebase Console](https://console.firebase.google.com/).
-   2. Create a new project with the name "Specno Office Space" or any name you desire.
+   2. Create a new project with the name "OfficeSpaceMike" or any name you desire.
    3. Follow the guide [here](https://developers.google.com/codelabs/building-a-web-app-with-angular-and-firebase#9) to setup the project in firebase. Skip the first step as this should be handled by `npm install`
    4. Once your project has been created on the firebase console, run `firebase init` and following the prompts 
    5. This Project only utilizes firebase _hosting_ and _firestore_, but you can choose all options if you're lazy.

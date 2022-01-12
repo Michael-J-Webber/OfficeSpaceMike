@@ -4,13 +4,12 @@
 
 export const environment = {
   firebase: {
-    apiKey: "AIzaSyBth1PdUZMO2V4OkWN6ZGooNfMfuMmLa1k",
-    authDomain: "michaelofficespace-ffac3.firebaseapp.com",
-    databaseURL: "https://michaelofficespace-ffac3-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "michaelofficespace-ffac3",
-    storageBucket: "michaelofficespace-ffac3.appspot.com",
-    messagingSenderId: "314666226605",
-    appId: "1:314666226605:web:cfe075b8099f31ebffc724"
+    apiKey: "AIzaSyCSKzLSyab-mNr9oScrcZ0d82XsYZbBGcs",
+    authDomain: "officespacemike-bbd03.firebaseapp.com",
+    projectId: "officespacemike-bbd03",
+    storageBucket: "officespacemike-bbd03.appspot.com",
+    messagingSenderId: "894831043697",
+    appId: "1:894831043697:web:a8c40c8b8200edf95ae7d0"
   },
   production: false
 };
