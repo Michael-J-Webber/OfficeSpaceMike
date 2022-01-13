@@ -1,15 +1,5 @@
 {
   "projects": {
-    "default": "officespacemike-bbd03",
-    "prod": "officespacemike-bbd03"
-  },
-  "targets": {
-    "specno-office-space": {
-      "hosting": {
-        "specno-office-space": [
-          "specno-office-space"
-        ]
-      }
-    }
+    "default": "officespacemike-bbd03"
   }
 }
